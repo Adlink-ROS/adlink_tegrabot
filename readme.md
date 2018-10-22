@@ -12,12 +12,12 @@ The purpose of this pkg is to demonstrate the abilities of ADLINK M200-JT2 compu
 [![TBD](TBD)](TBD)  
 
 ## Developers & Team
-Ewing Kang
-Alan Chen  
-Chester Tseng  
-Bill Wang  
-Erik Boasson  
-Ryan Chen  
+* Ewing Kang (ewing.kang@adlinktech.com)
+* Alan Chen (alan.chen@adlinktech.com)
+* Chester Tseng (chester.Tseng@adlinktech.com)
+* Bill Wang (bill.wang@adlinktech.com)
+* Erik Boasson  
+* Ryan Chen (ryanjb.chen@adlinktech.com)
   
 ADLINK Technology, Inc  
 Advanced Robotic Platform Group  
