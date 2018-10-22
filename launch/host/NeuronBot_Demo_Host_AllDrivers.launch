@@ -1,0 +1,27 @@
+<launch>
+    <arg name="robot_base"       default="kobuki" />
+    <arg name="dummy_transforms" default="false" />
+    <arg name="host_robot"       default="true" />
+    <arg name="camera_type"      default="Astra_Pro" /> <!-- opt: Astra, Astra_Pro, D435 -->
+	<arg name="use_state_publisher" default="true" />
+
+    <!-- Camera Driver -->    
+	<include file="$(find adlink_tegrabot)/launch/host/include/$(arg camera_type)_rgbd_driver.launch.xml">
+		<arg name="use_state_publisher" value="$(arg use_state_publisher)" />
+	</include>
+
+    <!-- YDLidar Driver -->
+    <include file="$(find adlink_tegrabot)/launch/include/ydlidar_driver.launch.xml"/>
+
+    <!-- Robot TF -->
+    <include unless="$(arg use_state_publisher)" file="$(find adlink_tegrabot)/launch/include/tegrabot_tf.launch.xml">
+        <arg name="fake_odom_link" value="$(arg dummy_transforms)" />
+        <arg name="host_robot"     value="$(arg host_robot)" />
+    </include>
+	
+	<!-- EWING -->
+	<include  if="$(arg use_state_publisher)" file="$(find tegrabot_description)/launch/robot_state_manager.launch"/>
+
+    <!-- Robot Base -->
+    <include file="$(find adlink_tegrabot)/launch/include/neuronbot_$(arg robot_base).launch.xml" />
+</launch>

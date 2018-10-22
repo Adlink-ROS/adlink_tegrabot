@@ -1,0 +1,17 @@
+<launch>
+    <!-- for amcl -->    
+    <arg name="init_x" default="0.662" />
+    <arg name="init_y" default="0.427" />
+    <arg name="init_a" default="2.612" />
+
+    <!-- Map server -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find adlink_tegrabot)/map/map.yaml"/>
+
+    <!-- Localization (amcl) -->
+    <include file="$(find adlink_tegrabot)/launch/include/neuronbot_amcl_improved.launch.xml">
+        <arg name="init_x" value="$(arg init_x)"/>
+        <arg name="init_y" value="$(arg init_y)"/>
+        <arg name="init_a" value="$(arg init_a)"/>
+    </include>
+
+</launch>
