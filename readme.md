@@ -7,8 +7,7 @@ The purpose of this pkg is to demonstrate the abilities of ADLINK M200-JT2 compu
    Coupter using NVIDIA's TX2 process chip   
    
 [Official Slides] https://github.com/Adlink-ROS/adlink_tegrabot/blob/master/document/ADLINK_tegraBot.pdf  
-[Youtube Video] **TBD**  
-[Youtube Video] **TBD  
+[Youtube Video] **TBD** 
 [![TBD](TBD)](TBD)  
 
 ## Developers & Team
@@ -54,14 +53,21 @@ Copyright 2018 ADLINK Technology, Inc.
   Source: https://github.com/turtlebot/turtlebot  
 
 **AI tracking**
+* CUDA v8.0
+* cudnn v6.0
+* libuvc
+* protoc 3.3 (notice the version)
+
 There are 4 package working together that made the people tracking using AI possible. 
 ```
-git clone TBD, git clone TBD, git clone TBD, git clone TBD
+cd ~/catkin_ws/src
+
+git clone https://github.com/Adlink-ROS/adlink_tegrabot https://github.com/Adlink-ROS/tf_ai_tracker.git https://github.com/Adlink-ROS/tegrabot_description.git https://github.com/Adlink-ROS/tensorflow_object_detector.git 
 ```
-* adlink_tegrabot 
-* tegrabot_description 
-* tensorflow_object_detector 
-* tf_ai_tracker 
+* adlink_tegrabot: main launch collection of the tegrabot
+* tegrabot_description: robot model (urdf) for rviz 
+* tensorflow_object_detector: TensorFlow classifier
+* tf_ai_tracker: people tracking controller 
 
 
 **Optional**
