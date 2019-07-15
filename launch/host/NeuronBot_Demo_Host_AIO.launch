@@ -37,9 +37,6 @@
     <!-- Following -->
     <include file="$(find adlink_tegrabot)/launch/host/NeuronBot_Demo_Host_Following.launch">
         <arg name="pure_legs" value="$(arg pure_legs)"/>
-        <arg name="init_x"    value="$(arg init_x)"/>
-        <arg name="init_y"    value="$(arg init_y)"/>
-        <arg name="init_a"    value="$(arg init_a)"/>
     </include>
 
     <!-- Localization (amcl) -->

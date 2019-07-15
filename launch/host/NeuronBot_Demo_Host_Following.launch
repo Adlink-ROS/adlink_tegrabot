@@ -14,7 +14,7 @@
 		<param name="inject_factor_lin" value="5"/>
 		<param name="decay_factor_ang" value="30"/>
 		<param name="inject_factor_ang" value="40"/>-->
-		<param name="target_cloth_type" value="tshirt"/>
+		<param name="target_cloth_type" value="shirt"/>
         <param name="target_threshold" value="0.88"/>
 		<node pkg="tf_ai_tracker" type="target_extractor" name="target_extractor" output="screen" respawn="true">
 
